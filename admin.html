@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Адмін панель</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Адмін панель</h1>
+      <nav>
+        <a href="index.html">На головну</a>
+        <a id="logout-link" href="#">Вихід</a>
+      </nav>
+    </header>
+    <main id="admin-content">
+      <div class="tabs">
+        <button class="tab-button active" data-tab="add-book">
+          Додати книгу
+        </button>
+        <button class="tab-button" data-tab="book-list">Список книг</button>
+        <button class="tab-button" data-tab="news">Новини</button>
+      </div>
+      <div id="tab-content">
+        <div id="add-book" class="tab active">
+          <h2>Додати нову книгу</h2>
+          <form id="add-book-form">
+            <label for="title">Назва:</label>
+            <input type="text" id="title" required />
+
+            <label for="author">Автор(и):</label>
+            <input type="text" id="author" required />
+
+            <label for="year">Рік публікації:</label>
+            <input type="number" id="year" required />
+
+            <label for="publisher">Видавництво:</label>
+            <input type="text" id="publisher" required />
+
+            <label for="genre">Жанр:</label>
+            <input type="text" id="genre" required />
+
+            <label for="category">Категорія:</label>
+            <input type="text" id="category" required />
+
+            <label for="description">Коротка анотація/опис:</label>
+            <textarea id="description" required></textarea>
+
+            <label for="cover">Обкладинка (URL):</label>
+            <input type="url" id="cover" required />
+
+            <label for="language">Мова:</label>
+            <input type="text" id="language" required />
+
+            <button type="submit">Додати книгу</button>
+          </form>
+        </div>
+        <div id="book-list" class="tab">
+          <h2>Список книг</h2>
+          <div id="books-container"></div>
+        </div>
+        <div id="news" class="tab">
+          <h2>Новини</h2>
+          <form id="add-news-form">
+            <label for="news-title">Заголовок:</label>
+            <input type="text" id="news-title" required />
+
+            <label for="news-content">Контент:</label>
+            <textarea id="news-content" required></textarea>
+
+            <button type="submit">Додати новину</button>
+          </form>
+          <div id="news-container"></div>
+        </div>
+      </div>
+    </main>
+    <script src="scripts/admin.js"></script>
+  </body>
+</html>

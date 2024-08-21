@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Catalog</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Тернопільська бібліотка ім. Левка Крупи</h1>
+      <nav>
+        <a id="login-link" href="login.html">Увійти</a>
+        <a id="register-link" href="register.html">Зареєструватися</a>
+        <a id="admin-link" href="admin.html" style="display: none"
+          >Адмін панель</a
+        >
+        <a id="logout-link" href="#" style="display: none">Вихід</a>
+        <a
+          id="my-reservations-link"
+          href="reservations.html"
+          style="display: none"
+          >Мої резерви</a
+        >
+      </nav>
+    </header>
+    <main id="main-content">
+      <h2>Ласкаво просимо до каталогу книг!</h2>
+      <div id="filter-menu">
+        <div>
+          <h3>Жанри</h3>
+          <div id="genres"></div>
+        </div>
+        <div>
+          <h3>Категорії</h3>
+          <div id="categories"></div>
+        </div>
+      </div>
+      <form id="search-form">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Пошук книги за назвою"
+          required
+        />
+        <button type="submit">Пошук</button>
+      </form>
+      <div id="search-results"></div>
+      <h2>Всі книги</h2>
+      <div id="all-books"></div>
+    </main>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
